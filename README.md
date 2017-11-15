@@ -28,6 +28,14 @@ Welcome to Pintellect challenge bulit specifically for Vanhackers!
 - [ ] Save the annotation in the backend (post mocked)
 - [ ] Be happy, you made it :)
 
+# What we want to see
+
+- Good usage of React (components)
+- Actions to be called in React
+- Reducers using Redux
+- Over layer for PDF content
+- Good practices in the code
+
 # Screen References
 
 MVP with one highlight and annotation for HTML content ![alt textMVP with one highlight and annotation for HTML content](https://raw.githubusercontent.com/Pintellect/vanhackathon/master/images/highligh_and_annotation.png)
