@@ -19,7 +19,7 @@ Welcome to Pintellect challenge bulit spcifically for Vanhackers
 
 # Steps to complete
 - [ ] Load the json from the API call (mocked)
-- [ ] Render the proper view accordialyn with the content type
+- [ ] Render the proper view according with the content type
   - [ ] render the over layer for PDF contents
   - [ ] render the html body for html content
 - [ ] Add a highlight on top of the content rendered
@@ -30,6 +30,6 @@ Welcome to Pintellect challenge bulit spcifically for Vanhackers
 
 # Screen References
 
-MVP with one highlight and annotation for HTML content
+MVP with one highlight and annotation for HTML content ![alt textMVP with one highlight and annotation for HTML content](https://raw.githubusercontent.com/Pintellect/vanhackathon/master/images/highligh_and_annotation.png)
 
 ## Backend Challenge
