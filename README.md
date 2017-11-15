@@ -30,5 +30,6 @@ Welcome to Pintellect challenge bulit spcifically for Vanhackers
 
 # Screen References
 
+MVP with one highlight and annotation for HTML content
 
 ## Backend Challenge
