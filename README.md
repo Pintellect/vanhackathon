@@ -17,7 +17,7 @@ Welcome to Pintellect challenge bulit specifically for Vanhackers!
   - Load the json (get to `/api/posts/<post_id>`)
   - Create annotation (post to `/api/posts/<post_id>/annotation`)
 
-# Steps to complete
+### Steps to complete
 - [ ] Load the [JSONs](/json) from the API call (mocked)
 - [ ] Render the proper view according with the content type
   - [ ] render the over layer for PDF contents
@@ -28,7 +28,7 @@ Welcome to Pintellect challenge bulit specifically for Vanhackers!
 - [ ] Save the annotation in the backend (post mocked)
 - [ ] Be happy, you made it :)
 
-# What we want to see
+### What we want to see
 
 - Good usage of React (components)
 - Actions to be called in React
@@ -36,6 +36,6 @@ Welcome to Pintellect challenge bulit specifically for Vanhackers!
 - Over layer for PDF content
 - Good practices in the code
 
-# Screen References
+### Screen References
 
 MVP with one highlight and annotation for HTML content ![alt textMVP with one highlight and annotation for HTML content](https://raw.githubusercontent.com/Pintellect/vanhackathon/master/images/highligh_and_annotation.png)
