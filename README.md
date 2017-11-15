@@ -31,5 +31,3 @@ Welcome to Pintellect challenge bulit specifically for Vanhackers!
 # Screen References
 
 MVP with one highlight and annotation for HTML content ![alt textMVP with one highlight and annotation for HTML content](https://raw.githubusercontent.com/Pintellect/vanhackathon/master/images/highligh_and_annotation.png)
-
-## Backend Challenge
