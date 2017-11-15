@@ -19,7 +19,7 @@ Welcome to Pintellect challenge bulit specifically for Vanhackers!
 
 # Steps to complete
 - [ ] Load the json from the API call (mocked)
-- [ ] Render the proper view accordialyn with the content type
+- [ ] Render the proper view according with the content type
   - [ ] render the over layer for PDF contents
   - [ ] render the html body for html content
 - [ ] Add a highlight on top of the content rendered
