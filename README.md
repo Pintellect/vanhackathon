@@ -18,7 +18,7 @@ Welcome to Pintellect challenge bulit specifically for Vanhackers!
   - Create annotation (post to `/api/posts/<post_id>/annotation`)
 
 # Steps to complete
-- [ ] Load the json from the API call (mocked)
+- [ ] Load the [JSONs](/json) from the API call (mocked)
 - [ ] Render the proper view according with the content type
   - [ ] render the over layer for PDF contents
   - [ ] render the html body for html content
