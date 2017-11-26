@@ -11,7 +11,7 @@
 - Used Redux for state management of annotations
 
 ### Known Issue
-- test layer of pdf will become bit off when will do selection and make annotation. So annotated text will be different and text will be form pdf. Moreover, text layer can be inspected in browser debugger 
+- text layer of pdf will become bit off when will do selection and make annotation. So annotated text will be different and text will be form pdf. Moreover, text layer can be inspected in browser debugger 
 
 
 # Vanhackathon
