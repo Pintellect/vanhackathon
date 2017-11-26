@@ -4,6 +4,7 @@
     "json-server": "^0.12.1"
   },
   "scripts": {
+    "install": "node install-packages.js",
     "start": "concurrently \"npm run server\" \"npm run client\"",
     "server": "json-server --watch db.json --routes routes.json --port 3001",
     "client": "node start-client.js"

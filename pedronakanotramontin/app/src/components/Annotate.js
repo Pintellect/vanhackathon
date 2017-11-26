@@ -80,12 +80,17 @@ class Annotate extends React.Component {
   // Tests if a text selection exists when the mouse up event is triggered
   // improvement: permit selection also from the keyboard, would need some kind of pooling
   //              to check for selection and give a confortable time for showing the form
-  onMouseUp(event) {
+  onMouseUp() {
     const userSelection = window.getSelection();
     if (userSelection.toString().length > 0) {
+      // Gets the top-y position of the selection rectangle to put the annotation
+      // box on the right-top side of the selection
+      const rect = userSelection.getRangeAt(0).getBoundingClientRect();
+      const selectionTop = rect.y + window.scrollY;
+
       this.setState({
         formVisibility: FORM_VISIBLE,
-        formPosition: event.pageY,
+        formPosition: selectionTop,
         selection: rangySaveRestore.saveSelection(),
       });
     } else {
