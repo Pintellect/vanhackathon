@@ -1,0 +1,47 @@
+.annotation-container {
+  position: absolute;
+}
+.annotation-form {
+  border: solid 1px #cccccc;
+  padding: 1em 1em 0 1em;
+  box-shadow: 0 0 2em rgba(0, 0, 0, 0.3);
+  background-color: #ffffff;
+  text-transform: uppercase;
+}
+.annotation-form .form-title {
+  color: #858787;
+  font-weight: bold;
+}
+.annotation-form .form-group {
+  text-align: left;
+}
+.annotation-form .form-group .form-control-label {
+  color: #41bbf4;
+}
+.annotation-form .form-group textarea {
+  font-weight: bold;
+}
+.annotation-form button {
+  margin-top: 1.2em;
+  text-transform: uppercase;
+  font-weight: bold;
+  position: relative;
+  vertical-align: top;
+  width: 100%;
+  height: 30px;
+  padding: 0;
+  font-size: 1.5em;
+  color: white;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  background: #41bbf4;
+  border: 0;
+  cursor: pointer;
+  border: solid 1px #3a9ecc;
+}
+.annotation-form button:active {
+  top: 1px;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}

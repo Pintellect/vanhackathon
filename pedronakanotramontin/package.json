@@ -1,25 +1,11 @@
 {
-  "name": "pedronakanotramontin",
-  "version": "0.1.0",
-  "private": true,
   "dependencies": {
-    "cross-fetch": "^1.1.1",
-    "dompurify": "^1.0.2",
-    "html-react-parser": "^0.4.0",
-    "react": "^16.1.1",
-    "react-bootstrap": "^0.31.5",
-    "react-dom": "^16.1.1",
-    "react-pdf": "^2.4.1",
-    "react-redux": "^5.0.6",
-    "react-scripts": "1.0.17",
-    "redux": "^3.7.2",
-    "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.2.0"
+    "concurrently": "^3.5.1",
+    "json-server": "^0.12.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "json-server --watch db.json --routes routes.json --port 3001",
+    "client": "node start-client.js"
   }
 }

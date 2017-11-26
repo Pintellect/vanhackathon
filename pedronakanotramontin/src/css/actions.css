@@ -1,9 +1,0 @@
-.hide_actions {
-  visibility: hidden;
-  position: absolute;
-}
-.show_actions {
-  visibility: visible;
-  position: absolute;
-  background: #cccccc;
-}
