@@ -7,6 +7,10 @@ import PropTypes from 'prop-types';
 
 import '../css/AnnotateForm.css';
 
+/**
+ * Components that handles the form state.
+ * Very simple, just manages the state of the textarea that holds the annotation description.
+ */
 class AnnotateForm extends React.Component {
   constructor(props) {
     super(props);

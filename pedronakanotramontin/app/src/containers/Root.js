@@ -6,6 +6,9 @@ import { configureStore } from '../Utils';
 
 const store = configureStore();
 
+/*
+ * Root container for the redux provider and the main application container.
+ */
 const Root = () => (
   <Provider store={store}>
     <App />

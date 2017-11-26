@@ -1,6 +1,8 @@
 .annotation-container {
   position: absolute;
 }
+
+/* Some shadow to grab the user attention to the form */
 .annotation-form {
   border: solid 1px #cccccc;
   padding: 1em 1em 0 1em;
@@ -8,19 +10,25 @@
   background-color: #ffffff;
   text-transform: uppercase;
 }
+
+/* Style for the form to give it a good look */
 .annotation-form .form-title {
   color: #858787;
   font-weight: bold;
 }
+
 .annotation-form .form-group {
   text-align: left;
 }
 .annotation-form .form-group .form-control-label {
   color: #41bbf4;
 }
+
 .annotation-form .form-group textarea {
   font-weight: bold;
 }
+
+/* Fancy button for the form */
 .annotation-form button {
   margin-top: 1.2em;
   text-transform: uppercase;
@@ -39,6 +47,7 @@
   cursor: pointer;
   border: solid 1px #3a9ecc;
 }
+
 .annotation-form button:active {
   top: 1px;
   outline: none;

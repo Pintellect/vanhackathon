@@ -1,11 +1,14 @@
 import fetch from 'cross-fetch';
 
+// Request/receive actions for fetching post data
 export const REQUEST_POST = 'REQUEST_POST';
 export const RECEIVE_POST = 'RECEIVE_POST';
 
+// Request/response actions for saving the annotation
 export const SAVE_ANNOTATION_REQUEST = 'SAVE_ANNOTATION_REQUEST';
 export const SAVE_ANNOTATION_RESPONSE = 'SAVE_ANNOTATION_RESPONSE';
 
+// Wrappers for fetching posts and saving annotation actions
 function requestPost() {
   return {
     type: REQUEST_POST,
@@ -32,7 +35,9 @@ function receiveSaveResponse(annotation) {
     annotation,
   };
 }
+// -- End Wrappers
 
+// Fetch the post data with specific ID
 export function fetchPost(postId) {
   return (dispatch) => {
     dispatch(requestPost());
@@ -56,6 +61,8 @@ function shouldFetchPost(state, postId) {
   return false;
 }
 
+// Fetches post data only when needed: different ID or empty post data in memory
+// Don't fetch if another one is going on
 export function fetchPostIfNeeded(postId) {
   return (dispatch, getState) => {
     if (shouldFetchPost(getState(), postId)) {
@@ -66,6 +73,7 @@ export function fetchPostIfNeeded(postId) {
   };
 }
 
+// Saves a new annotation for the specific postId
 export function saveAnnotation(postId, annotation) {
   return (dispatch) => {
     dispatch(requestSave());

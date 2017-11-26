@@ -9,6 +9,7 @@ import rangyHighlighter from 'rangy/lib/rangy-highlighter';
 
 import rootReducer from './redux/reducers';
 
+// Highlights the selections using the predifined class 'annotate-highlight'
 export function highlight(selection) {
   const highlightStyle = 'annotate-highlight';
 
@@ -22,6 +23,7 @@ export function highlight(selection) {
   highlighter.highlightSelection(highlightStyle);
 }
 
+// Create a new annotation container
 export function newAnnotation(annotation) {
   return (
     <div className="annotation" key={annotation.id} style={{ top: annotation.position }}>
@@ -30,6 +32,7 @@ export function newAnnotation(annotation) {
   );
 }
 
+// Creates the application store
 export function configureStore(preloadedState) {
   const loggerMiddleware = createLogger();
 
@@ -40,10 +43,12 @@ export function configureStore(preloadedState) {
   );
 }
 
+// Test if there is new annotation in the state
 export function hasNewAnnotation(prevAnnotations, nextAnnotations) {
   return prevAnnotations.length !== nextAnnotations.length;
 }
 
+// Tests if the posts are different
 export function hasNewPost(prevPost, nextPost) {
   if (
     (prevPost && !nextPost)
@@ -64,6 +69,7 @@ export function hasNewPost(prevPost, nextPost) {
   return false;
 }
 
+// Checks if the form visibility has changed
 export function changedFormVisibility(prevVisibility, nextVisibility) {
   return prevVisibility !== nextVisibility;
 }

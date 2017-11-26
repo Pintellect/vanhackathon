@@ -5,6 +5,10 @@ import { PropTypes } from 'prop-types';
 
 import '../css/HtmlContainer.css';
 
+/**
+ * The container for HTML content.
+ * Very simple, just displays the post title and content.
+ */
 const HtmlContainer = (props) => {
   const { post } = props;
 

@@ -13,27 +13,36 @@ import {
 
 import '../css/App.css';
 
+/**
+ * Main application container, where the most important state is manipulated.
+ * Here we track the state of fetching post data and saving annotations, also
+ * the post being displayed to the user and the annotations he created.
+ */
 class App extends React.Component {
   constructor(props) {
     super(props);
+
+    this.dispatch = action => this.props.dispatch(action);
 
     this.handleFetchPost = this.handleFetchPost.bind(this);
     this.handleSaveAnnotation = this.handleSaveAnnotation.bind(this);
   }
 
+  // Loads the html post by default when the application is initialized
   componentDidMount() {
-    const { dispatch } = this.props;
-    dispatch(fetchPostIfNeeded(1));
+    this.handleFetchPost(1);
   }
 
+  // Dispatches the action to load a post
   handleFetchPost(postId) {
-    const { dispatch } = this.props;
-    dispatch(fetchPostIfNeeded(postId));
+    this.dispatch(fetchPostIfNeeded(postId));
   }
 
+  // Dispatches the action to save an annotation
   handleSaveAnnotation(annotation) {
-    const { dispatch, postId } = this.props;
-    dispatch(saveAnnotation(postId, annotation));
+    if (this.props.post) {
+      this.dispatch(saveAnnotation(this.props.post.id, annotation));
+    }
   }
 
   render() {
@@ -63,14 +72,14 @@ function mapStateToProps(state) {
   const {
     isFetching,
     isSaving,
-    annotations,
     post,
+    annotations,
   } = state;
 
   return {
     isFetching, // Track the loading state of post data
-    post, // Last fetched post
     isSaving, // Track the saving state of annotations
+    post, // Last fetched post
     annotations, // Annotations saved by the user
   };
 }
@@ -82,8 +91,8 @@ App.propTypes = {
     position: PropTypes.number,
     description: PropTypes.string,
   })).isRequired,
-  postId: PropTypes.number,
   post: PropTypes.shape({
+    id: PropTypes.number,
     type: PropTypes.string,
     title: PropTypes.string,
     content: PropTypes.string,
@@ -92,8 +101,7 @@ App.propTypes = {
 };
 
 App.defaultProps = {
-  postId: 0,
-  post: {},
+  post: { id: 0 },
 };
 
 export default connect(mapStateToProps)(App);

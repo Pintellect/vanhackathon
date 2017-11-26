@@ -5,12 +5,11 @@ import {
   SAVE_ANNOTATION_RESPONSE,
 } from './actions';
 
-function posts(
+function reducers(
   state = {
     isFetching: false,
-    postId: 0,
-    post: null,
     isSaving: false,
+    post: null,
     annotations: [],
   },
   action,
@@ -23,7 +22,6 @@ function posts(
     case RECEIVE_POST:
       return Object.assign({}, state, {
         isFetching: false,
-        postId: action.postId,
         post: action.post,
         annotations: [],
       });
@@ -41,6 +39,6 @@ function posts(
   }
 }
 
-const rootReducer = posts;
+const rootReducer = reducers;
 
 export default rootReducer;

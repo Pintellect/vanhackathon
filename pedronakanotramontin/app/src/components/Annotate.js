@@ -18,9 +18,18 @@ import {
 
 import '../css/Annotate.css';
 
+// constants for the form style visibility
 const FORM_VISIBLE = 'visible';
 const FORM_HIDDEN = 'hidden';
 
+/**
+ * Component responsible for watching the users' highlightings and managing the form state.
+ * Since the form state and highlighting is concentrated on this component, I chose not to use
+ * redux and the global state for simplicity and to avoid poluting the application state.
+ * This component receives a post data and delegates the display details for the underlying
+ * components, this way the highlighting and annotation process do not need to care if it is a
+ * HTML, PDF or another document type.
+ */
 class Annotate extends React.Component {
   constructor(props) {
     super(props);
@@ -36,6 +45,7 @@ class Annotate extends React.Component {
     this.handleFormSaveClick = this.handleFormSaveClick.bind(this);
   }
 
+  // Initializes rangy, the text selection library
   componentDidMount() {
     rangy.init();
   }
@@ -60,11 +70,16 @@ class Annotate extends React.Component {
     const totalAnnotations = nextProps.annotations.length;
     const lastAnnotation = nextProps.annotations[totalAnnotations - 1];
 
+    // The highlight for the text is triggered when a new annotation is saved in the application
+    // state
     if (lastAnnotation && hasNewAnnotation(this.props.annotations, nextProps.annotations)) {
       highlight(lastAnnotation.selection);
     }
   }
 
+  // Tests if a text selection exists when the mouse up event is triggered
+  // improvement: permit selection also from the keyboard, would need some kind of pooling
+  //              to check for selection and give a confortable time for showing the form
   onMouseUp(event) {
     const userSelection = window.getSelection();
     if (userSelection.toString().length > 0) {
@@ -82,6 +97,7 @@ class Annotate extends React.Component {
     }
   }
 
+  // Saves a new annotation for the text
   handleFormSaveClick(description) {
     const { handleSaveAnnotation } = this.props;
     const { formPosition, selection } = this.state;
@@ -96,9 +112,11 @@ class Annotate extends React.Component {
   }
 
   render() {
-    const { post, handleSaveAnnotation, annotations } = this.props;
+    const { post, annotations } = this.props;
     const { formVisibility, formPosition, selection } = this.state;
 
+    // Here the post data is tested to see what type it contains, for the time only HTML and PDF
+    // documents can be displayed
     let container = <div>Invalid Post</div>;
     if (post !== null) {
       if (post.type === 'html') {
@@ -126,7 +144,6 @@ class Annotate extends React.Component {
             formVisibility={formVisibility}
             formPosition={formPosition}
             selection={selection}
-            handleSaveAnnotation={handleSaveAnnotation}
             handleFormSaveClick={this.handleFormSaveClick}
           />
         </div>

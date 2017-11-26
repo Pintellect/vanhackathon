@@ -4,6 +4,11 @@ import { PropTypes } from 'prop-types';
 
 import '../css/PdfContainer.css';
 
+/**
+ * Container for the PDF Document.
+ * Uses the component react-pdf, that uses the mozilla pdf.js.
+ * Has some limitations but displays correctly the PDF for most cases.
+ */
 class PdfContainer extends React.Component {
   constructor(props) {
     super(props);
@@ -20,6 +25,9 @@ class PdfContainer extends React.Component {
     this.setState({ numPages });
   }
 
+  // Renders the whole PDF on the screen for simplicity.
+  // In a production environment it would be recommended to display one page at a time or let
+  // the user choose.
   render() {
     const { file, numPages } = this.state;
 

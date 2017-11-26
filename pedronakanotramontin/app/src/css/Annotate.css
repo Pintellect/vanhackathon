@@ -7,19 +7,18 @@
   padding: 10px;
   color: black;
 }
-.annotate-container .annotate-container-left {
+
+.annotate-container > div {
   flex: 1;
 }
-.annotate-container .annotate-container-middle {
-  flex: 1;
-}
-.annotate-container .annotate-container-right {
-  flex: 1;
-}
+
+/* Style for the highlight */
 .annotate-highlight {
   background-color: yellow;
   color: #000000;
 }
+
+/* The annotation box */
 .annotation {
   border: solid 1px #cccccc;
   padding: 1em;

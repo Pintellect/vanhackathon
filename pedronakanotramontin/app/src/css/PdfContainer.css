@@ -5,21 +5,33 @@
   margin: 10px 0;
   color: black;
 }
+
 .pdf-container .ReactPDF__Document {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
+/*
+ * Fixed min-width for not crunching the PDF content and the text overlay.
+ * Here is a limitation to the read-pdf lib, if the PDF canvas resizes, the text-layout does not
+ * resize together because there is no state or javascript keeping both containers in sync.
+ * The sizing is done only during rendering and the text layout is not flexible enough.
+ * Some changing to the text-layout rendering can solve this limitation, for the challenge
+ * there is not enough time to change it correctly.
+ */
 .pdf-container .ReactPDF__Page {
   min-width: 612px;
   max-width: calc(100% - 2em);
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
   margin: 1em;
 }
+
 .pdf-container .ReactPDF__Page canvas {
   max-width: 100%;
   height: auto !important;
 }
+
 .pdf-container .ReactPDF__Loader,
 .pdf-container .ReactPDF__Error,
 .pdf-container .ReactPDF__NoData {
