@@ -1,3 +1,19 @@
+### Recomended Reading
+
+### To Run
+- Go to project dir and run commands (npm install ) and (npm run)
+
+### Completed Points
+- PDF and HTML rendering
+- text layer rendering for PDF
+- highlight and annotation
+- integration of required JS libs for pdf and annotation
+- Used Redux for state management of annotations
+
+### Known Issue
+- test layer of pdf will become bit off when will do selection and make annotation. So annotated text will be different and text will be form pdf. Moreover, text layer can be inspected in browser debugger 
+
+
 # Vanhackathon
 Welcome to Pintellect challenge bulit specifically for Vanhackers!
 
