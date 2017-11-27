@@ -1,14 +1,14 @@
-/package-lock.json
+/waqarmuneer/package-lock.json
 /node_modules/# See https://help.github.com/ignore-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
+/waqarmuneer/node_modules
 
 # testing
 /coverage
 
 # production
-/build
+/waqarmuneer/build
 
 # misc
 .DS_Store
