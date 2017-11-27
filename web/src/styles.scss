@@ -1,0 +1,246 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,500,700,800);
+@import url(https://fonts.googleapis.com/css?family=Play);
+
+body {
+  font: 300 14px/1.8 'Raleway', sans-serif;
+  color: #999;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: #E7746F;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #999;
+}
+
+.form-control,
+.navbar a {
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  -ms-transition: all 0.4s ease-in-out 0s;
+  -o-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.btn,
+a {
+  -webkit-transition: all 0.125s ease-in-out 0s;
+  -moz-transition: all 0.125s ease-in-out 0s;
+  -ms-transition: all 0.125s ease-in-out 0s;
+  -o-transition: all 0.125s ease-in-out 0s;
+  transition: all 0.125s ease-in-out 0s;
+}
+/* ---------------------------------------------- /*
+ * Typography
+/* ---------------------------------------------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font: 700 40px/1.2 Raleway, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin: 5px 0;
+  color: #222;
+}
+
+h2 {
+  font-size: 30px;
+  margin: 0 0 30px;
+}
+
+h3 {
+  font-size: 13px;
+  letter-spacing: 1px;
+  margin: 0 0 5px;
+}
+
+h4 {
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+h5 {
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+h6 {
+  font-size: 11px;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+/* ---------------------------------------------- /*
+ * Reset border-radius
+/* ---------------------------------------------- */
+#filter li,
+.btn,
+.form-control,
+.iconbox,
+.input-group-addon,
+.progress,
+.scroll-up a {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+/* ---------------------------------------------- /*
+ * Input-group
+/* ---------------------------------------------- */
+.input-group .form-control {
+  z-index: auto;
+}
+
+.input-group-addon {
+  background: #D8E1E4;
+  border: 2px solid #D8E1E4;
+  padding: 6px 15px;
+  font-weight: 700;
+}
+/* ---------------------------------------------- /*
+ * Inputs styles
+/* ---------------------------------------------- */
+.form-control {
+  background: #FFF;
+  border: 1px solid #D8E1E4;
+  font-size: 12px;
+  padding: 0 15px;
+}
+
+.form-control:focus {
+  border-color: rgba(135, 135, 135, 0.7);
+}
+
+.form-horizontal .form-group-lg .form-control,
+.input-lg {
+  height: 38px;
+  font-size: 13px;
+}
+
+.form-horizontal .form-group-sm .form-control,
+.input-sm {
+  font-size: 11px;
+  height: 30px;
+}
+
+textarea.form-control {
+  padding: 15px;
+  max-width: 100%;
+  min-width: 100%;
+}
+/* ---------------------------------------------- /*
+ * Custom button style
+/* ---------------------------------------------- */
+.btn {
+  font-family: Raleway, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 13px;
+  padding: 8px 26px;
+  border: 0;
+}
+
+.btn.active,
+.btn:active,
+.btn:focus,
+.btn:hover {
+  outline: inherit !important;
+}
+/* Button size */
+.btn-group-lg > .btn,
+.btn-lg {
+  padding: 10px 25px;
+  font-size: 13px;
+  background: rgba(17, 17, 17, 0.8);
+  color: #fff;
+}
+
+.btn-group-lg > .btn:hover,
+.btn-lg:hover {
+  background: rgba(17, 17, 17, 1.8);
+  color: #fff;
+}
+
+.btn-group-sm > .btn,
+.btn-sm {
+  padding: 6px 25px;
+  font-size: 11px;
+}
+
+.btn-group-xs > .btn,
+.btn-xs {
+  padding: 5px 25px;
+  font-size: 10px;
+}
+
+.btn .icon-before {
+  margin-right: 6px;
+}
+
+.btn .icon-after {
+  margin-left: 6px;
+}
+/* ---------------------------------------------- /*
+ * Preloader
+/* ---------------------------------------------- */
+#preloader {
+  background: #FFF;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 9999;
+}
+
+#loading {
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 200px;
+  left: 50%;
+  margin: -100px 0 0 -100px;
+  position: absolute;
+  top: 50%;
+  width: 200px;
+}
+/* ---------------------------------------------- /*
+ * Media
+/* ---------------------------------------------- */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 34px;
+    letter-spacing: 3px;
+  }
+
+  h2 {
+    font-size: 24px;
+    margin: 0 0 30px;
+    letter-spacing: 3px;
+  }
+}
+
+.bg-primary {
+  background: #2C3E50;
+}
+
+.bg-success {
+  background: #18BC9C;
+}
+
+.panel-custom {
+  background-color: #444;
+  color: #fff;
+}
