@@ -1,0 +1,15 @@
+.Annotation-container {
+  width: 300px;
+  position: absolute;
+  max-height: 500px;
+  overflow: auto;
+  right: 0%;
+}
+
+.Annotation-container textarea {
+  width: 100%;
+}
+
+.addButton {
+  margin-bottom: 15px;
+}
