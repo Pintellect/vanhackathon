@@ -1,0 +1,28 @@
+.annotate-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+  padding: 10px;
+  color: black;
+}
+
+.annotate-container > div {
+  flex: 1;
+}
+
+/* Style for the highlight */
+.annotate-highlight {
+  background-color: yellow;
+  color: #000000;
+}
+
+/* The annotation box */
+.annotation {
+  border: solid 1px #cccccc;
+  padding: 1em;
+  box-shadow: 0 0 2em rgba(0, 0, 0, 0.3);
+  background-color: #ffffff;
+  position: absolute;
+}

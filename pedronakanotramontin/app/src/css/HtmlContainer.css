@@ -1,0 +1,23 @@
+.html-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+}
+
+/*
+ * Fixed min-width for not crunching all the content and a little shadow to give it a focus the
+ * user attention in the text
+ */
+.html-document {
+  min-width: 640px;
+  max-width: calc(60% - 2em);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  padding: 1em;
+}
+
+.html-document header {
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 0.2em 0 0.7em 0;
+}
